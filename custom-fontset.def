@@ -1,0 +1,63 @@
+%%
+%% This is file `custom-fontset.def'
+%% Custom font definition file with AutoFakeBold support
+%%
+
+\ProvidesFile{custom-fontset.def}
+  [2023/12/21 v1.0 Custom Windows Fonts Definition with AutoFakeBold]
+
+% 设置主要字体
+\setCJKmainfont{SimSun}[
+    AutoFakeBold=true
+]
+
+\setCJKsansfont{Microsoft YaHei}[
+    BoldFont=* Bold,
+    AutoFakeBold=true
+]
+
+\setCJKmonofont{FangSong}[
+    AutoFakeBold=true
+]
+
+% 设置各种中文字体族
+\setCJKfamilyfont{zhsong}{SimSun}[
+    AutoFakeBold=true
+]
+
+\setCJKfamilyfont{zhhei}{SimHei}[
+    AutoFakeBold=true
+]
+
+\setCJKfamilyfont{zhfs}{FangSong}[
+    AutoFakeBold=true
+]
+
+\setCJKfamilyfont{zhkai}{KaiTi}[
+    AutoFakeBold=true
+]
+
+\setCJKfamilyfont{zhyahei}{Microsoft YaHei}[
+    BoldFont=* Bold,
+    AutoFakeBold=true
+]
+
+\setCJKfamilyfont{zhli}{LiSu}[
+    AutoFakeBold=true
+]
+
+\setCJKfamilyfont{zhyou}{YouYuan}[
+    AutoFakeBold=true
+]
+
+% 定义字体切换命令
+\NewDocumentCommand\songti{}{\CJKfamily{zhsong}}
+\NewDocumentCommand\heiti{}{\CJKfamily{zhhei}}
+\NewDocumentCommand\fangsong{}{\CJKfamily{zhfs}}
+\NewDocumentCommand\kaishu{}{\CJKfamily{zhkai}}
+\NewDocumentCommand\lishu{}{\CJKfamily{zhli}}
+\NewDocumentCommand\youyuan{}{\CJKfamily{zhyou}}
+\NewDocumentCommand\yahei{}{\CJKfamily{zhyahei}}
+
+%%
+%% End of file `custom-fontset.def'
